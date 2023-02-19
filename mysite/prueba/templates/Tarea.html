@@ -1,0 +1,235 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea de Django y Python</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" rel=stylesheet/>
+    <!-- ...................................................  -->
+    <link rel="shorcut icon" type="image/x-icon" href="{% static 'pictures/favicon.png' %}" />
+    <!-- ...................................................  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+    <!-- ...................................................  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <!-- ...................................................  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Oswald&display=swap" rel="stylesheet">
+<!-- ...................................................  --> 
+<style>
+    article{
+      padding-top: 20px;
+      column-count: 3;
+    }
+</style>
+
+</head>
+
+
+<body>
+  <a href="{% url 'home'%}">Inicio</a>
+  <center><h1>My primera página web con Django y Python </h1></center>
+   <!-- ...................................................  -->
+   
+   <div class="contenedor">
+      <img class="img-1" src="https://www.carreras.pe/userfiles/images/Logos%20y%20fachadas/Logo%20UNFV.jpg" height="150"; flex: 1;object-fit: contain;>   
+      <img src="{% static 'pictures/fiis.jpg' %}" alt="fiis" height="120" flex: 1; object-fit: contain;>
+    </div>
+   
+
+
+<br>
+  <center><img src="{% static 'pictures/Horse_runing.gif' %}" alt=" Horse_runing" width="250"></center>
+ 
+
+
+    <h1> Usando Django en Python</h1>
+    <!-- ...................................................  -->
+
+
+    <h2>Semana 9 y 10</h2>
+    <h3>Pregunta 1</h3>
+    <p>Escribir en Python la suma de las potencias al cuadrado del 1 al 15</p>
+    <p>Respuesta:  {{respuesta1}}</p>
+    <br> 
+    <hr>
+
+
+    <!-- ...................................................  -->
+
+    <h3>Pregunta 2</h3>
+    <p>Escribir la suma de los primeros 200 números pares</p>
+    <p>Respuesta: {{respuesta2}}</p>
+    <br> 
+    <hr>
+    <!-- ...................................................  -->
+
+
+  <h3>Pregunta 3</h3>
+  <p>Imprimir una lista de elementos, a elecciones del usuario, del siguiente arreglo</p>
+<p>Lista: {{perritos}} </p>
+<article>
+  {% for i in perritos %}
+  <div class="row">
+    <li>{{ i }}</li> <br>
+  </div>
+  {% endfor %}
+</article>
+<br> 
+<hr>
+
+
+ <!-- ...................................................  -->
+
+
+
+ <h3>Pregunta 4 </h3>
+ <p>Realizar un programa en Python que escriba las primeras 10 potencias de base 5. Imprimir cada uno de los resultados</p>
+ <p>Respuesta: </p>
+ <article>
+ {% for i in pot_5 %}
+  <div class="row">
+    <li>{{ i }}</li> <br>
+ </div>
+{% endfor %}
+</article>
+<br>
+<hr> 
+
+<!-- ...................................................  -->
+<h3>Pregunta 5 </h3>
+<p>Escribir un programa en python que escriba números al azar desde el 0 hasta el 10. Considerar usar el módulo "random" de python</p>
+<article>
+{% for i in numbers %}
+<div class="row">
+  <li>{{ i }}</li> <br>
+</div>
+{% endfor %}
+</article>
+<br> 
+<hr>
+<!-- ...................................................  -->
+
+
+<center><img src="{% static 'pictures/Horse_runing.gif' %}" alt=" Horse_runing" height="100"></center>
+
+<!--------------------------->
+<h2>Semana 11</h2>
+
+<h3>Pregunta 1</h3>
+<p>Usar el bucle while para escribir los primeros 30 números naturales</p>
+<article>
+{% for i in sem11_num %}
+<div class="row">
+  <li>{{ i }}</li> <br>
+</div>
+{% endfor %}
+</article>
+<br> 
+<!---------------------------------------------------------------->
+<hr>
+<h3>Pregunta 2</h3> 
+<p>Realizar un programa en python integrado en django con bucle while que permita al usuario sumar las cifras del número 5837564</p>
+<p>Respuesta: La suma de dígitos es: {{dígitos_sum}}</p>
+<hr>
+<!--------------------------------------------------------------->
+<h3>Pregunta 3</h3> 
+<p>Realizar un programa en python con el bucle while para imprimir la tabla de multiplicar del 15</p>
+<p> Respuesta: </p>
+<article>
+  {% for i in respuesta6 %}
+  <div class="row">
+    <li>{{ i }}</li> <br>
+  </div>
+  {% endfor %}
+  </article>
+  <hr>
+  <br> 
+<!---------------------------------------------------------->
+<h3>Pregunta 4</h3> 
+  <p>Realizar un programa en Python que, a partir de una lista de números, pueda idenficar cuál es el mayor de ellos</p>
+  <p>{{números}}</p>
+  <p> Respuesta: {{respuesta7}}</p>
+  <br>
+  <hr>
+<!--------------------------------------------------------->
+<h3>Pregunta 5</h3>
+  <p>Realizar un programa en Python para averiguar si el número 23 es primo</p>
+  <p>Respuesta: {{positivo}}</p>
+  <br>
+  <hr>
+<!-------------------------------------------------------->
+<!--Sección de semana 12-->
+<h2>Semana 12</h2>
+<h3>Pregunta 1</h3>
+  <p>Realizar un programa en Python que pueda contar cuántos números pares existen antes de 
+    determinado número (por ejemplo 50)
+  </p>
+  <p>Respuesta: {{respuesta11}}</p>
+<!---->
+<h3>Pregunta 2</h3>
+  <p>Realizar un programa que lance dos dados hasta que el valor de sus resultados sean iguales </p>
+  <p>Respuesta: </p>
+  <article>
+    {% for i in respuesta12 %}
+    <div class="row">
+      <li>{{ i }}</li> <br>
+    </div>
+    {% endfor %}
+    </article>
+    <hr>
+    <br> 
+  <!---->
+  <h3>Pregunta 3</h3>
+   <p>Escribir un programa en python que genere 10 contraseñas con una cantidad de , por lo menos, 5 caracteres</p>
+   <article>
+    {% for i in respuesta13 %}
+    <div class="row">
+      <li>{{ i }}</li> <br>
+    </div>
+    {% endfor %}
+    </article>
+    <hr>
+    <br> 
+    <!---->
+    <h3>Pregunta 4</h3>
+    <p> A partir de una lista ordenada del estatus de un grupo de radios, hacer una programa en python
+      que sea capaz de listarlos junto a su estatus
+    </p>
+    <p>Lista: {{radio_estado}}</p>
+    <p>Respuesta: </p>
+    <article>
+      {% for i in respuesta14 %}
+      <div class="row">
+        <li>{{ i }}</li> <br>
+      </div>
+      {% endfor %}
+      </article>
+      <hr>
+      <br> 
+    <!---->
+    <h3>Pregunta 5</h3>
+    <p> Realizar un programa en Python que imprima números al azar hasta que salga 5</p>
+    <p>Respuesta: {{respuesta15}} </p>
+    
+    <article>
+      {% for i in respuesta15 %}
+      <div class="row">
+        <li>{{ i }}</li> <br>
+      </div>
+      {% endfor %}
+      </article>
+      <hr>
+      <br> 
+    <br>
+    <a href="{% url 'home'%}">Inicio</a>
+    
+</body>
+</html>
+
